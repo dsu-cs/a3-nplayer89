@@ -3,10 +3,10 @@
 ## Details
 For this assignment you will be developing a C++ program which implements a 
 binary search tree. Your program will read in a text file called `cmd.txt` that will 
-instruct your program what operations to run. Your program will take this file
+tell your program what operations to run. Your program will take this file
 as a command line argument. Your program should implement a C++ class which will be 
-used to represent your binary search tree. This repo contains the following direcotires: 
-* `src` - Contains the source code for the assignment and the files you will need
+used to represent your binary search tree. This repo contains the following directories: 
+* `src` - Contains the source code for the assignment and the files you will need to
 complete. Any modifications you make to complete your assignment should be made
 inside this directory.  
 * `tests` - This directory contains the code that is used to test your program. 
@@ -22,9 +22,11 @@ reads information from `cmd.txt` which instructions the program on what actions
 to take. This file has already been completed for you and should not be modified.  
 * `node.hpp` - This file defines and implements the `Node` class which is the
 basic building block used to create our data structure. This file has already
-been completed and should not be modified.
+been completed and should not be modified. Be sure to review the functions that 
+this class implements.
 * `bst.hpp` - This file defines and implements the `BST` class. You are responsible 
-for implementing all functions of this class.
+for implementing all functions of this class as they are shown in the class prototype 
+at the top of the .hpp file.
 * `makefile` - This is the file that can be used to build your program. This file 
 has already been completed and should not be modified.
 * `cmd.txt` - This file is a sample cmd file that can be used to test your program's 
@@ -34,12 +36,13 @@ different edge cases.
 In short, the following files are the only ones that you should modify for this
 assignment:  
 * `bst.hpp` 
+* `cmd.txt`
 
 No other file should be modified!
 
 ### Interface
 Below is the prototype for the class you are to implement. It can also be found
-in the .hpp file for the class as well. If you have any questions as to the expected 
+in the .hpp file for the class. If you have any questions as to the expected 
 behavior of a function please do not hesitate to ask  
 
 ```C++
@@ -98,7 +101,7 @@ of the file should NOT be hardcoded into your program.
 GNU Make is used to build our program for us. To support that a complete make
 file has already been provided for you. In order to build your program perform 
 the following steps:  
-* cd into the source director `> cd src`  
+* cd into the source director `cd src`  
 * Type `make` to build your program.  
 
 ## Runing unit tests
@@ -109,17 +112,6 @@ in this repo. If you beleive your program to be functioning correctly you may
  Then type `make` which will build the unit tests for your program, this may take 
  a minute as multiple executables are being compiled. Then finally type `./run_tests.sh` 
  to execute the unit tests and report back if they passed or failed.  
-
-## Continuous Testing
-It is highly recommend that you commit code back to the github repository often. 
-Each time you commit your code, it will automatically be built by TravisCI and
-have unit tests ran against it. You can then see what tests have been successfully
-completed and which have not. This gives you a good way to gauge your progress
-as you complete the assignment. This also gives me access to view your code and 
-easily assist with any problems you may run into. Do note that you should run tests 
-locally as well as Travis can sometimes take a substantial amount of time to run 
-your code. This is due to everyone in the class sharing a single build server and 
-only one person being able to execute a test at a time
 
 ## Deliverables
 Commit the final version of your code and push it to the github repository
@@ -142,4 +134,4 @@ There is a unique case to think about when dealing with a BST. That is what
 happens if we try to insert a number that is already in the tree into the tree
 again? It is expected that only one occurance of a number or node should ever
 appear in a tree, so if you ever try to insert the same node into a tree twice
-then your program should just not insert the duplicate node into the tree.
+then your program should not insert the duplicate node into the tree.
