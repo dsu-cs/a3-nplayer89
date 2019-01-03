@@ -12,8 +12,6 @@ for f in $CWD/*.out; do
         echo "[-] See tests/$FILE.cpp to see test case that caused failure"
         echo "[-] Exiting......"
         exit 1
-    else
-        TOTAL_POINTS=$(($TOTAL_POINTS+$?))
     fi
 done
 

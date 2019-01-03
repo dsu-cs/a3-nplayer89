@@ -43,6 +43,12 @@ int main()
         exit(points);
     }
 
+    if(ret_data->size() != data.size())
+    {
+        cout <<"[-->] vector returned from function is not the right length\n";
+        exit(points);
+    }
+
     points+=2;
 
     i = 0;

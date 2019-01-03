@@ -38,6 +38,7 @@ int main()
     }
 
     bst.remove(3);
+    data.erase(data.begin()+10);
 
     ret_data = bst.inorder();
     if(ret_data == NULL)
@@ -45,6 +46,13 @@ int main()
         cout << "[-->] Inorder returned NULL when it should have returned a vector\n";
         exit(points);
     }
+
+    if(ret_data->size() != data.size())
+    {
+        cout <<"[-->] vector returned from function is not the right length\n";
+        exit(points);
+    }
+
 
     i = 0;
     for (std::vector<int>::iterator it = ret_data->begin(); it != ret_data->end(); ++it)
